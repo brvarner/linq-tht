@@ -27,9 +27,9 @@ You need:
 
  ### Installation
  Running this app is quite simple:
-1. Clone the app into your chosen directory
+1. Use Git to clone the app into your chosen directory
   ```bash
-  https://github.com/brvarner/linq-tht.git
+  git clone https://github.com/brvarner/linq-tht.git
   ```
 2. Navigate to the app directory in your terminal
   ```bash
