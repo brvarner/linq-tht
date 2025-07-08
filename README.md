@@ -10,7 +10,7 @@ We'll start with info on setup, then move to an explanation of features, then ex
 1. [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
-    - [.env confing](#env-config)
+    - [.env config](#env-config)
 2. [Features](#Features)
     - [What's Here](#whats-here)
     - [What's Missing](#whats-missing)
