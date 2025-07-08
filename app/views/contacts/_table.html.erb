@@ -1,0 +1,40 @@
+<div class="card mt-10">
+    <h5 class="card-title text-center mb-3">Contact List</h5>
+
+    <%= render 'contacts/search', contacts: @contacts %>
+
+    <% if @contacts.any? %>
+      <table class="table table-striped table-sm">
+          <thead>
+              <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+              </tr>
+          </thead>
+          <tbody>
+          <% @contacts.each do |contact| %>
+              <%= render 'contacts/contact', contact: contact %>
+          <% end %>
+          </tbody>
+      </table>
+    <% else %>
+      <div class="text-center py-5">
+        <% if params[:search].present? %>
+          <div class="alert alert-warning" role="alert">
+            <h5 class="alert-heading">No contacts found</h5>
+            <p class="mb-0">
+              No contacts match your search for "<strong><%= params[:search] %></strong>".
+              <br>
+              <%= link_to "Show all contacts", contacts_path, class: "btn btn-link p-0" %>
+            </p>
+          </div>
+        <% else %>
+          <div class="alert alert-info" role="alert">
+            <h5 class="alert-heading">No contacts yet</h5>
+            <p class="mb-0">You haven't added any contacts yet. Click "Add Contact" to get started!</p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+</div>
