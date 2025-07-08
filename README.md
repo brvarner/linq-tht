@@ -19,10 +19,10 @@ We'll start with info on setup, then move to an explanation of features, then ex
 
 ### Prerequisites
 You need:
-- At least Rails 7.1.3.4 (I built this app on Rails 8, but I don't use many Rails 8 features, and it works well on Rails 7)
+- At least Rails 8.0.2 (I built this app on Rails 8, but I don't use many Rails 8 features)
 - At least PostgreSQL 14.12
 - At least Bundler 2.5.14
-- At least Ruby 3.3.3
+- At least Ruby 3.4.4 (I manage Ruby versions with rbenv. If you don't see 3.4.4 in your list of possible versions using `rbenv install --list-all`, you may need to [update your installer](https://github.com/rbenv/rbenv-installer).
 - (Optional) I built this app with WSL2. If you'd like to run it on your local machine: [Here's a guide](https://gorails.com/setup/windows/10). I ran Ubuntu 22.04 in the WSL2 shell.
 
  ### Installation
@@ -43,7 +43,7 @@ You need:
 
 4. Create the tables and run the necessary migrations
    ```bash
-   rails db:create db:bundle
+   rails db:create db:migrate
    ```
 5. (Optional) If you want some contacts in the table to test search functionality before you create a contact, you can seed the database
    ```bash
